@@ -1,0 +1,54 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 90vh;
+   width: 100vw;
+   overflow: auto;
+   background-color: #343a40;
+}
+
+#code-div {
+   height: 50%;
+   width: 50%;
+   min-width: 20rem;
+   overflow: auto;
+   display: grid;
+   place-items: center;
+}
+
+.gist-meta {
+   display: none;
+}
+
+.gist {
+   width: 100%;
+}
+
+.options-wrapper {
+   width: 50%;
+   min-width: 20rem;
+   display: flex;
+   justify-content: space-around;
+}
+
+.options {
+   padding: 0.5rem;
+   background: #efefef;
+   border-radius: 10px;
+   width: 7rem;
+   text-align: center;
+   cursor: pointer;
+   transition: ease 1s;
+}
+
+@media only screen and (max-width: 990px) {
+   .options-wrapper {
+      flex-direction: column;
+   }
+   .options {
+      width: 100%;
+      margin-top: 1rem;
+   }
+}

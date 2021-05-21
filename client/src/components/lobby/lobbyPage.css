@@ -1,0 +1,52 @@
+#lobby-section {
+   margin-top: 1rem;
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   height: 89vh;
+   gap: 1rem;
+}
+
+@media only screen and (max-width: 790px) {
+   #lobby-section {
+      grid-template-columns: 1fr;
+   }
+   .leaderboard-wrapper {
+      margin: 1rem !important;
+      height: 50vh !important;
+   }
+}
+
+#lobby-section hr {
+   border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.user-info,
+.leaderboard-wrapper {
+   padding: 2rem;
+   height: 100%;
+   color: #dee3ea;
+}
+
+.leaderboard-wrapper {
+   box-shadow: 0 0 8px black;
+   border-radius: 10px;
+   margin-right: 0.8rem;
+   height: 98%;
+   overflow: auto;
+}
+
+/* .top-score-wrapper {
+   height: 87%;
+   overflow: auto;
+} */
+
+.top-scorer {
+   margin-top: 1rem;
+   padding: 1rem;
+   border-radius: 10px;
+   background-color: var(--secondary);
+   font-weight: 800;
+   display: flex;
+   justify-content: space-between;
+   text-transform: uppercase;
+}
