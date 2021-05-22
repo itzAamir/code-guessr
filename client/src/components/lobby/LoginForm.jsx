@@ -20,7 +20,7 @@ const LoginForm = ({ isLoggedIn }) => {
    };
 
    return (
-      <Form className="mt-4">
+      <Form className="mt-4" id="game-start-wrapper">
          <Button
             className={`btn-${isLoggedIn ? "secondary" : "primary"} mr-3`}
             disabled={isLoggedIn}

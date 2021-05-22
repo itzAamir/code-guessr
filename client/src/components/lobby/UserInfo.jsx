@@ -9,8 +9,8 @@ const UserInfo = ({ isLoggedIn, userDetails }) => {
          <div className="instruction-div">
             <h4>Instructions :-</h4>
             <p>
-               1) Want to sign in? Click on <b>Sign In with Google</b> button or
-               you can directly <b>Start The Game</b>.
+               1) To play the game, click on <b>Sign In with Google</b> button or
+               you can directly click on <b>Start The Game</b>.
             </p>
             <p>
                2) Guess which language being displayed on the screen and select

@@ -1,8 +1,8 @@
 #lobby-section {
    margin-top: 1rem;
+   margin-bottom: 1rem;
    display: grid;
    grid-template-columns: 2fr 1fr;
-   height: 89vh;
    gap: 1rem;
 }
 
@@ -12,7 +12,10 @@
    }
    .leaderboard-wrapper {
       margin: 1rem !important;
-      height: 50vh !important;
+      height: 53vh !important;
+   }
+   #game-start-wrapper button {
+      margin-bottom: 1rem;
    }
 }
 
@@ -22,7 +25,7 @@
 
 .user-info,
 .leaderboard-wrapper {
-   padding: 2rem;
+   padding: 2rem 2rem 0 2rem;
    height: 100%;
    color: #dee3ea;
 }
@@ -31,14 +34,10 @@
    box-shadow: 0 0 8px black;
    border-radius: 10px;
    margin-right: 0.8rem;
+   padding-bottom: 2rem;
    height: 98%;
    overflow: auto;
 }
-
-/* .top-score-wrapper {
-   height: 87%;
-   overflow: auto;
-} */
 
 .top-scorer {
    margin-top: 1rem;

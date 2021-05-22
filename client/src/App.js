@@ -5,7 +5,8 @@ import Homepage from "./components/home/Homepage";
 import LobbyPage from "./components/lobby/LobbyPage";
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:3001";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://code-guessr.herokuapp.com";
 
 const App = () => {
   return (

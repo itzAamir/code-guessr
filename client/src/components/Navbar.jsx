@@ -33,6 +33,7 @@ const NavBar = ({ isLoggedIn }) => {
             position: "sticky",
             width: "100%",
             top: 0,
+            zIndex: "5",
          }}
       >
          <Navbar.Brand>CODE GUESSR 🤔</Navbar.Brand>

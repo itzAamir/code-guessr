@@ -39,6 +39,7 @@ const Homepage = () => {
    const [pageNumCompleted, setPageNumCompleted] = useState([]);
    const [gameFinished, setGameFinished] = useState(false);
    const [score, setScore] = useState(0);
+   const [topScorers, setTopScorers] = useState([]);
    const [lastTopScorer, setLastTopScorer] = useState(0);
    const [isLoggedIn, setIsLoggedIn] = useState(false);
    const [showGameOverModal, setShowGameOverModal] = useState(false);
@@ -66,6 +67,7 @@ const Homepage = () => {
          .get("/api/top-scorers")
          .then((res) => {
             const scores = res.data.data;
+            setTopScorers(scores);
             setLastTopScorer(scores[scores.length - 1].score);
          })
          .catch((err) => console.error(err));
@@ -139,8 +141,8 @@ const Homepage = () => {
                answerRef.current.classList.add("btn-success");
             }
             e.target.classList.add("btn-danger");
-            setShowGameOverModal(true);
             setGameFinished(true);
+            setShowGameOverModal(true);
          }
       } else {
          findGist();
@@ -198,6 +200,9 @@ const Homepage = () => {
                lastTopScorer={lastTopScorer}
                isLoggedIn={isLoggedIn}
                user={user}
+               topScorers={topScorers}
+               isGameFinished={gameFinished}
+               correctAnswer={currGistLang}
             />
          </div>
       </>
