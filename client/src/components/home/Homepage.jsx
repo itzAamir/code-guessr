@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import CodeContainer from "../CodeContainer";
+import CodeContainer from "./CodeContainer";
 import axios from "axios";
-import OptionWrapper from "../OptionWrapper";
+import OptionWrapper from "./OptionWrapper";
 import Spinner from "../Spinner";
 import Navbar from "../Navbar";
 import firebase from "firebase/app";
-import GameOverModal from "../GameOverModal";
+import GameOverModal from "./GameOverModal";
 
 const randomLanguages = [
    "Python",
@@ -175,7 +175,7 @@ const Homepage = () => {
 
    return (
       <>
-         <Navbar isLoggedIn={isLoggedIn} />
+         <Navbar isLoggedIn={isLoggedIn} user={user} />
          <div className="container text-center">
             <h1>SCORE: {score}</h1>
             <h3>Guess the programming language</h3>

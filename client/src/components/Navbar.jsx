@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import SuggestionBox from "./SuggestionBox";
 import firebase from "firebase/app";
 
-const NavBar = ({ isLoggedIn }) => {
+const NavBar = ({ isLoggedIn, user }) => {
    const [showModal, setShowModal] = useState(false);
 
    const handleClose = () => setShowModal(false);
@@ -46,7 +46,12 @@ const NavBar = ({ isLoggedIn }) => {
             >
                Suggestion Box
             </Button>
-            <SuggestionBox onShow={showModal} onClose={handleClose} />
+            <SuggestionBox
+               onShow={showModal}
+               onClose={handleClose}
+               user={user}
+               isLoggedIn={isLoggedIn}
+            />
             {isLoggedIn && (
                <Button variant="outline-danger" onClick={handleLogout}>
                   Logout

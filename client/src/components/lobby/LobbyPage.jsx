@@ -22,7 +22,7 @@ const LobbyPage = () => {
 
    return (
       <>
-         <Navbar isLoggedIn={isLoggedIn} />
+         <Navbar isLoggedIn={isLoggedIn} user={user} />
          <section id="lobby-section">
             <div className="user-info">
                <UserInfo isLoggedIn={isLoggedIn} userDetails={user} />
